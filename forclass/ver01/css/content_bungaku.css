@@ -1,0 +1,106 @@
+.content {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    left: 15%;
+    z-index: 1;
+}
+
+.content_01 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    background-color: #ffd2a8;
+    border: 2px solid #c8d7ff;
+    color: #fff !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    z-index: 1;
+    border-radius: 5%;
+}
+
+.content_01:hover {
+    background-color: transparent;
+    border: 2px solid #998bfa;
+    color: #998bfa !important;
+    border-radius: 80%;
+}
+
+.content_01 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content_02 {
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    background-color: #ffd2a8;
+    border: 2px solid #c8d7ff;
+    color: #fff !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    z-index: 1;
+    border-radius: 5%;
+}
+
+.content_02:hover {
+    background-color: transparent;
+    border: 2px solid #998bfa;
+    color: #998bfa !important;
+    border-radius: 80%;
+}
+
+.content_02 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content_03 {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    width: 30%;
+    height: 30%;
+    background-color: #ffd2a8;
+    border: 2px solid #c8d7ff;
+    color: #fff !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    z-index: 1;
+    border-radius: 5%;
+}
+
+.content_03:hover {
+    background-color: transparent;
+    border: 2px solid #998bfa;
+    color: #998bfa !important;
+    border-radius: 80%;
+}
+
+.content_03 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

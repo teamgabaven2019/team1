@@ -1,0 +1,19 @@
+.title {
+    position: relative;
+    left: 0%;
+}
+
+.title h1 {
+    font-size: 300%;
+}
+
+.maincontent {
+    position: relative;
+    width: 70%;
+    height: 30%;
+    left: 10%;
+}
+
+.maincontent h1 {
+    font-size: 150%;
+}
