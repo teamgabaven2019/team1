@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="ホームページサンプル株式会社 | ホームページサンプル株式会社では最新技術と自然との調和を目指します。">
+    <meta name="keywords" content="">
+    <title>学問の森｜提供の森</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="style3.css" type="text/css">
+
+    <script src="js/jquery1.7.2.min.js"></script>
+    <script src="js/script.js"></script>
+    <style>
+        label>input {
+            display: none;
+            /* アップロードボタンのスタイルを無効にする */
+        }
+        
+        label {
+            color: #AAAAAA;
+            /* ラベルテキストの色を指定する */
+            background-color: #006DD9;
+            /* ラベルの背景色を指定する */
+            padding: 10px;
+            /* ラベルとテキスト間の余白を指定する */
+            border: double 4px #AAAAAA;
+            /* ラベルのボーダーを指定する */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="inner">
+            <div class="logo">
+                <a href="index.html">学問の森<br><span>～ヒトのポテンシャルを引き出すために～</span></a>
+            </div>
+        </div>
+    </div>
+    <div id="mainBanner" class="subImg">
+        <div class="inner">
+            <img src="images/mainImg.jpg" alt="" width="930" height="190">
+            <div class="slogan">
+                <h2>情報提供のページです</h2>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="wrapper">
+
+        <section id="main">
+
+
+            <section class="content">
+                <h3 class="heading">提供された情報を参照するページ</h3>
+                <article>
+                    <p>最新の情報の提供にご協力ください。<br>
+                        <a href="pdf.html" class="readmore">&raquo; 提供された情報はこちら</a>
+                    </p>
+                </article>
+            </section>
+
+            <section class="content">
+                <h3 class="heading">選択と送信</h3>
+                <article><br>
+
+                    <center>
+                        <div id="upload-area" style="height: 120px; width: 60%; background: rgb(183, 253, 255); border-radius: 25%;">この枠へドラッグ＆ドロップ</div><br>
+                        <form enctype="multipart/form-data" action="02.php" method="post">
+                            <label for="upload-form-fileselect" style="background: rgb(224, 203, 108);color:azure;">
+                                手動でファイルを選択
+                            <input type="file" id="upload-form-fileselect" accept="application/pdf" name="file1" multiple="multiple">
+                            </label><br><br><br>
+                            <label for="filesubmit" style="background: rgb(224, 203, 108);color:azure;">
+                                    ファイルを送信する
+                                <input type="submit" value="送信" accept="application/pdf" id="filesubmit">
+                            </label>
+                            <br><br>
+                        </form>
+
+                        <script>
+                            $(document).ready(function() {
+                                // 指定部分の上に乗っかっているときの処理
+                                $("#upload-area").on("dragover", function(e) {
+                                    e.preventDefault();
+                                });
+                                // 指定部分でドロップしたときの処理
+                                $("#upload-area").on("drop", function(e) {
+                                    e.preventDefault();
+                                    document.getElementById("upload-form-fileselect").files = e.originalEvent.dataTransfer.files;
+                                });
+                            });
+                        </script>
+                    </center>
+
+                </article>
+            </section>
+
+        </section>
+
+
+
+    </div>
+    <div id="footer">
+        <div class="inner">
+            <article class="grid copyright">
+                Copyright(c) 2012 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a>
+            </article>
+
+            </section>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

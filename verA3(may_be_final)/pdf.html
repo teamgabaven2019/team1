@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="ホームページサンプル株式会社 | ホームページサンプル株式会社では最新技術と自然との調和を目指します。">
+    <meta name="keywords" content="">
+    <title>学問の森｜pdfの森</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+
+    <script src="js/jquery1.7.2.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <div id="header">
+        <div class="inner">
+            <!-- ロゴ -->
+            <div class="logo">
+                <a href="index.html">学問の森<br><span>～ヒトのポテンシャルを引き出すために～</span></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="mainBanner" class="subImg">
+        <div class="inner">
+            <img src="images/mainImg.jpg" alt="" width="930" height="190">
+            <div class="slogan">
+                <h2>pdfのページです</h2>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+
+        <section id="main">
+
+
+            <section class="content">
+                <h3 class="heading">情報の提供について</h3>
+                <article>
+                    <p>最新の情報の提供にご協力ください。<br>
+                        <a href="data.html" class="readmore">&raquo; アップロードはこちら</a>
+                    </p>
+                </article>
+            </section>
+
+
+            <?php
+              $path = './upload/';
+              $targetDir = 'upload';
+              $pdfFiles = glob($targetDir.DIRECTORY_SEPARATOR."*.pdf");
+              $NowPdfNumber = count($pdfFiles);
+           ?>
+
+                <script>
+                    var maxnumber = <?php echo $NowPdfNumber; ?>;
+                    for (var k = 1; k <= maxnumber; k++) {
+                        var aiueo = k + ".pdfを開く";
+                        var url = "upload/" + k + ".pdf";
+                        var aaaa = '<section class="content "><h3 class="heading ">';
+                        var bbbb = k + "つ目";
+                        var cccc = '</article></section>';
+                        document.write('<section class="content "><h3 class="heading ">' + bbbb + '</h3 <article>');
+                        document.write(aiueo.link(url) + '</article></section>');
+                        document.write();
+                    }
+                </script>
+        </section>
+
+
+
+    </div>
+
+    <div id="footer">
+        <div class="inner">
+            <article class="grid copyright">
+                Copyright(c) 2012 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a>
+            </article>
+
+            </section>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
